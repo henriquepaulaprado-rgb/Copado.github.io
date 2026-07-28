@@ -59,5 +59,23 @@
          if (i+1 < fase.length) {
            const vencedor = escolherVencedor(fase[i].nome, fase[i].prob, fase[i+1].nome, fase[i+1].prob);
 
-           texto += fase[i].nome + " vs " + fase[i+1].nome + " 
+           texto += fase[i].nome + " vs " + fase[i+1].nome + " <b>" + vencedor + "</b><br";
+
+           novaFase.push({nome: vencedor, prob: 50}); // probabilidade ajustada 
+         } else {
+
+           novaFase.push(fase[i]; // caso de número ímpar 
+
+         }
+       }
+       fase = novaFase;
+
+     }
+     texto += "<h2>Campeão: " + fase[0].nome + " </h2>";
+     document.getElementByld("resultado").innerHTML = texto;
+
+   }
+  </script>
+</body>
+</html>
 
