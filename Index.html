@@ -53,5 +53,11 @@
      let texto = '''';
 
      while (fase.length > 1) {
-       texto += "<h3>Fase com " + fase.length + seleções</h3>"
+       texto += "<h3>Fase com " + fase.length + seleções</h3>";
+       let novaFase = [];
+       for (let i = 0; i < fase.length; i += 2) {
+         if (i+1 < fase.length) {
+           const vencedor = escolherVencedor(fase[i].nome, fase[i].prob, fase[i+1].nome, fase[i+1].prob);
+
+           texto += fase[i].nome + " vs " + fase[i+1].nome + " 
 
